@@ -4,6 +4,7 @@ import InputField from "./components/InputField";
 import TodoList from "./components/TodoList";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import { Todo } from "./components/model";
+import { RiTodoFill } from "react-icons/ri"
 
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
@@ -61,7 +62,7 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
-        <span className="heading">Taskify</span>
+        <span className="heading">Get It Done <RiTodoFill/></span>
         <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
         <TodoList
           todos={todos}
